@@ -1,7 +1,241 @@
 # Marvel
 Projeto para consumir [api marvel](https://developer.marvel.com/)
 
-# Motivacao
+# func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+		//offset e recurso que a cada pagina vai pular
+		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
+		let offset = limit * page
+		let nameStartsWith: String
+		
+		//substituir caracters vazio
+		if let name = name, !name.isEmpty{
+			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+		}else {
+			//vai ser vazio
+			nameStartsWith = ""
+		}
+		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
+		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+			switch response.result {
+			case let .success(data):
+				onComplete(data)
+			case let .failure(error):
+				print(error)
+				onComplete(nil)
+			}
+		}
+	}
+	
 Reforcar aprendizado de gerenciamento dependencias com Cocoapods,scrooll infito e consumo de api
 
 
@@ -28,31 +262,31 @@ struct Thumbnail: Codable {
 
 //exemplo do Alamofire
 func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
-		//offset e recurso que a cada pagina vai pular
-		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
-		let offset = limit * page
-		let nameStartsWith: String
 		
-		//substituir caracters vazio
-		if let name = name, !name.isEmpty{
-			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
-		}else {
-			//vai ser vazio
-			nameStartsWith = ""
-		}
+  let offset = limit * page
+  let nameStartsWith: String
 		
-		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+  //substituir caracters vazio		
+  if let name = name, !name.isEmpty{
+  nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+  }else {
+  //vai ser vazio
+  nameStartsWith = ""
+  }
+		
+  let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
 	 
-		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
-			switch response.result {
-			case let .success(data):
-				onComplete(data)
-			case let .failure(error):
-				print(error)
-				onComplete(nil)
-			}
-		}
-}
+  AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+  switch response.result {
+  case let .success(data):
+  onComplete(data)
+  case let .failure(error):
+  print(error)
+  onComplete(nil)
+   }
+  }
+ }
+	
 
 ```
 
@@ -69,60 +303,60 @@ func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelI
 ```swift
 //requisicao
 func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
-		let offset = limit * page
-		let nameStartsWith: String
+  let offset = limit * page
+  let nameStartsWith: String
+		 
+  if let name = name, !name.isEmpty{
+  nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
+  }else {
 		
-		if let name = name, !name.isEmpty{
-			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
-		}else {
+  nameStartsWith = ""
+  }
 		
-			nameStartsWith = ""
-		}
-		
-		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
-	 
-		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
-			switch response.result {
-			case let .success(data):
-				onComplete(data)
-			case let .failure(error):
-				print(error)
-				onComplete(nil)
-			}
-		}
+  let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	  
+  AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
+  switch response.result {
+  case let .success(data):
+  onComplete(data)
+  case let .failure(error):
+  print(error)
+  onComplete(nil)
+  }
+  }
 }
 	
 //quem vai usar funcao que criei
 func loadHeros() {
-		isLoadingHero = true
-		marvelManager.getCharacters(name: name,page: currentPage) { [self](response) in
-			if response != nil {
-				heroes += response!.data.results
-				total = response!.data.total
-				//estou disparando um fila main porque e assincrona
-				//os dados
-				DispatchQueue.main.async {
-					//apos fazer reload se nao sumir o text e porque
-					//nao encontrei heroi
-					//importante o dispactQueue.main pois aqui e assincrono
-					self.isLoadingHero = false
-					self.label.text = "Dont finded heores with name   \(self.name!)"
-					self.tableView.reloadData()
+isLoadingHero = true
+marvelManager.getCharacters(name: name,page: currentPage) { [self](response) in
+if response != nil {
+heroes += response!.data.results
+total = response!.data.total
+//estou disparando um fila main porque e assincrona
+//os dadoS
+ DispatchQueue.main.async {
+ //apos fazer reload se nao sumir o text e porque
+ //nao encontrei heroi
+ //importante o dispactQueue.main pois aqui e assincrono
+ self.isLoadingHero = false
+ self.label.text = "Dont finded heores with name   \(self.name!)"
+ self.tableView.reloadData()
 					
-				}
-			}
-		}
+   }
+  }
+ }
 		
-	}
+}
 
 // metodo do table view que e acionado a cada vez que aparece um cellula na tela
 override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		if indexPath.row == heroes.count - 10 && heroes.count < total && !isLoadingHero {
-			  currentPage += 1
-			  loadHeros()
-		}
+ if indexPath.row == heroes.count - 10 && heroes.count < total && !isLoadingHero {
+ currentPage += 1
+ loadHeros()
+  }
 		 
-	}
+}
 
 ```
 
@@ -133,30 +367,30 @@ override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewC
 
 ```swift
 	func prepareCell(_ hero:Hero) {
-		labDescription.text = hero.description
-		labName.text = hero.name
+	labDescription.text = hero.description
+	labName.text = hero.name
 	
-		if let urlImage = URL(string: hero.thumbnail.url){
-			thumbImg.kf.setImage(with: urlImage)
-			thumbImg.kf.indicatorType = .activity
-		}else {
-			thumbImg.image = nil
-		}
+	if let urlImage = URL(string: hero.thumbnail.url){
+	thumbImg.kf.setImage(with: urlImage)
+	thumbImg.kf.indicatorType = .activity
+	}else {
+	thumbImg.image = nil
+	}
 	 
-		//border radius
-		thumbImg.layer.cornerRadius = thumbImg.frame.size.height/2
-		thumbImg.layer.borderColor = UIColor.red.cgColor
-		thumbImg.layer.borderWidth = 2
+	 //border radius
+    	thumbImg.layer.cornerRadius = thumbImg.frame.size.height/2
+	thumbImg.layer.borderColor = UIColor.red.cgColor
+	thumbImg.layer.borderWidth = 2
 		
 	}
   
   
 //acessar celula selecionada
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "singleHero" {
-			let vc = segue.destination as! HeroViewController
-			//toda row seleciado fica no indexPathForSelectedRow
-			vc.hero = heroes[tableView.indexPathForSelectedRow!.row]
+   if segue.identifier == "singleHero" {
+    let vc = segue.destination as! HeroViewController
+    //toda row seleciado fica no indexPathForSelectedRow
+    vc.hero = heroes[tableView.indexPathForSelectedRow!.row]
 		}
 }
 
