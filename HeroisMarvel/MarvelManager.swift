@@ -16,14 +16,16 @@ struct MarvelManager {
 	let privateKey = "945d7fbb424745562d84179510e7f52c30f87008"
 	let baseUrl = "https://gateway.marvel.com:443/v1/public/characters?"
 	let limit = 50
+
 	
 	//@escaping e preciso porque vou usar essa funcao dentro de uma closure
 	//dessa maneira estou retornando o valor direto para closure,por isso o uso do onComplete
-	func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
+func getCharacters (name: String?,page: Int = 0 , onComplete: @escaping (MarvelInfo?) ->Void)  {
 		//offset e recurso que a cada pagina vai pular
 		//entao iniciar mostrara os 50 primeiros apos isto ira pular mais 50,mais 100
 		let offset = limit * page
 		let nameStartsWith: String
+		
 		//substituir caracters vazio
 		if let name = name, !name.isEmpty{
 			nameStartsWith = "nameStartsWith=\(name.replacingOccurrences(of:" ",with: ""))"
@@ -31,8 +33,9 @@ struct MarvelManager {
 			//vai ser vazio
 			nameStartsWith = ""
 		}
-		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
 		
+		let url = "\(baseUrl)\(configCredentials())&limit=\(limit)&offset=\(offset)&\(nameStartsWith)"
+	 
 		AF.request(url).validate().responseDecodable(of:MarvelInfo.self) { response in
 			switch response.result {
 			case let .success(data):

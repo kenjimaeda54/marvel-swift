@@ -21,12 +21,19 @@ class ViewController: UIViewController {
 		navigationController?.setNavigationBarHidden(true, animated: true)
 	}
 	
+	override func viewDidDisappear(_ animated: Bool) {
+		 super.viewDidDisappear(animated)
+		tfName.text = ""
+	}
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "allHeroes" {
 			let vc = segue.destination as! HeroesTableViewController
 			vc.name = tfName.text
+			tfName.resignFirstResponder()
 		}
 	}
 	
 }
+
 
