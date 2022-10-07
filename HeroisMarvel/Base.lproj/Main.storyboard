@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="tZt-vh-Wqg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="-2" y="-1" width="413" height="894"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-iZ-TmO">
@@ -60,7 +60,7 @@
                                             <color key="titleColor" red="1" green="1" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8PA-3y-HgU" kind="show" id="aNK-0L-soa"/>
+                                            <segue destination="8PA-3y-HgU" kind="show" identifier="allHeroes" id="aNK-0L-soa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -112,7 +112,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="115" id="IvE-zC-P4n" customClass="HeroTableViewCell" customModule="HeroisMarvel" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="115" id="IvE-zC-P4n" customClass="HeroesTableViewCell" customModule="HeroisMarvel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="414" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IvE-zC-P4n" id="K1H-xf-g0d">
@@ -154,9 +154,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="ivThumb" destination="Aki-LY-asC" id="CoI-7D-NCS"/>
-                                    <outlet property="lbDescription" destination="L3s-sd-nOJ" id="zNu-np-iBe"/>
-                                    <outlet property="lbName" destination="sEf-mg-oq0" id="vSu-tI-i5s"/>
+                                    <outlet property="labDescription" destination="L3s-sd-nOJ" id="VBb-v6-hRI"/>
+                                    <outlet property="labName" destination="sEf-mg-oq0" id="L9i-hz-j1Y"/>
+                                    <outlet property="thumbImg" destination="Aki-LY-asC" id="vrK-mU-biQ"/>
                                     <segue destination="wbg-dF-UHh" kind="show" id="1JN-Yt-CJs"/>
                                 </connections>
                             </tableViewCell>

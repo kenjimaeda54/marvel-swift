@@ -34,17 +34,14 @@ struct Hero: Codable {
 
 struct Thumbnail: Codable {
 	let path: String
-	//aqui ira refletir extension
-	//na api pede extension
-	let ext: String
+	//para usar uma palavra reservada
+	//utiliza os ``
+	let `extension`: String
 	
-	//extension e uma palavra reservada por isso o uso
-	//de CodeKeys
-	enum Codingkeys: String, CodingKey {
-		case path
-		case etx = "extension"
+	var url: String {
+	  return  "\(path).\(`extension`)"
 	}
-	
+
 }
 
 struct HeroUrl: Codable {
