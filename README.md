@@ -1,5 +1,5 @@
 # Marvel
-Projeto para consumir [api marvel](https://developer.marvel.com/)
+Projeto para consumir (api marvel)[https://developer.marvel.com/]
 
 #  Motivação
 Reforçar aprendizado de gerenciamento dependências com Cocoapods, scrooll infinto e consumo de api
@@ -127,7 +127,7 @@ override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewC
 ## 
 - Para possuir acesso a row selecionado usamos o método indexPathForSelectedRow
 - Utilizei o [kingfisher](https://github.com/onevcat/Kingfisher) para lidar com requisição de imagens no servidor
-- Para usar requisição fora de https precisei liberar [NSAppTransportSecurity](https://stackoverflow.com/questions/32631184/the-resource-could-not-be-loaded-because-the-app-transport-security-policy-requi)
+- Para usar requisição fora de https precisei liberar (NSAppTransportSecurity)[https://stackoverflow.com/questions/32631184/the-resource-could-not-be-loaded-because-the-app-transport-security-policy-requi]
 
 ```swift
 	func prepareCell(_ hero:Hero) {
